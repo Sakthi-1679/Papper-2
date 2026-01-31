@@ -1,9 +1,9 @@
 import { Product, Service, NavItem } from './types';
 
 export const COMPANY_INFO = {
-  name: "Jayamurugan Packing Industry",
+  name: "EcoPrint Paper Bags Pvt Ltd",
   phone: "+91 98765 43210",
-  email: "sales@jayamuruganpacking.com",
+  email: "sales@ecoprintbags.com",
   address: "No. 123, Industrial Estate, Salem Main Road, Tamil Nadu, India",
   whatsapp: "919876543210"
 };
