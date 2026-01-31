@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, PenTool, Printer, Factory, Star, Users, Package, Award } from 'lucide-react';
+import { CheckCircle, ArrowRight, PenTool, Printer, Factory, Star, Award } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
 import Section from '../components/Section';
 import { PRODUCTS, SERVICES } from '../constants';
