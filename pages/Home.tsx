@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, PenTool, Printer, Factory, Star, Award } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
 import Section from '../components/Section';
+import SmartImage from '../components/SmartImage';
 import { PRODUCTS, SERVICES } from '../constants';
 
 interface HomeProps {
@@ -135,8 +136,8 @@ const Home: React.FC<HomeProps> = ({ onQuoteRequest }) => {
                       Enquire Now
                     </button>
                  </div>
-                <img 
-                  src={product.image} 
+                <SmartImage 
+                  baseName={product.image} 
                   alt={product.name} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
