@@ -1,5 +1,6 @@
 import React from 'react';
 import Section from '../components/Section';
+import SmartImage from '../components/SmartImage';
 import { PRODUCTS } from '../constants';
 
 interface ProductsPageProps {
@@ -19,8 +20,8 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onQuoteRequest }) => {
           {PRODUCTS.map((product) => (
             <div key={product.id} className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="h-72 overflow-hidden bg-gray-100 relative group">
-                <img 
-                  src={product.image} 
+                <SmartImage 
+                  baseName={product.image} 
                   alt={product.name} 
                   className="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
                 />
