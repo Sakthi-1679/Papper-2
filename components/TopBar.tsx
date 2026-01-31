@@ -25,7 +25,7 @@ const TopBar: React.FC = () => {
 
   return (
     <div 
-      className={`bg-primary text-white text-xs py-2 hidden md:block border-b border-blue-900/30 transition-transform duration-300 ease-in-out fixed w-full z-[60] top-0 ${
+      className={`bg-accent text-white text-xs py-2 hidden md:block border-b border-white/10 transition-transform duration-300 ease-in-out fixed w-full z-[60] top-0 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
