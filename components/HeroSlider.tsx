@@ -70,8 +70,8 @@ const HeroSlider: React.FC = () => {
             />
           </div>
           
-          {/* Dark Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/50 to-transparent z-10" />
+          {/* Gradient Overlay using new theme */}
+          <div className="absolute inset-0 bg-hero-gradient z-10 opacity-90" />
 
           {/* Content */}
           <div className="absolute inset-0 z-20 flex items-center">
@@ -82,7 +82,7 @@ const HeroSlider: React.FC = () => {
                   <>
                     <div className="overflow-hidden mb-4">
                         <span className="inline-block text-secondary font-bold text-sm md:text-base tracking-[0.3em] uppercase animate-slide-left">
-                        Welcome to Jayamurugan
+                        Welcome to EcoPrint
                         </span>
                     </div>
                     
@@ -97,7 +97,7 @@ const HeroSlider: React.FC = () => {
                     <div className="animate-slide-up" style={{ animationDelay: '600ms' }}>
                         <Link
                             to="/products"
-                            className="group inline-flex items-center bg-secondary text-white px-10 py-4 rounded text-lg font-bold hover:bg-white hover:text-primary transition-all duration-300 shadow-xl shadow-amber-500/20"
+                            className="group inline-flex items-center bg-secondary text-primary px-10 py-4 rounded text-lg font-bold hover:bg-white hover:text-primary transition-all duration-300 shadow-xl"
                         >
                             {slide.cta} 
                             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
