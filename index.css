@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { 
+    font-family: 'Inter', sans-serif; 
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .delay-100 { transition-delay: 100ms; }
+  .delay-200 { transition-delay: 200ms; }
+  .delay-300 { transition-delay: 300ms; }
+
+  .hero-zoom {
+    animation: zoomInEffect 6s linear forwards;
+  }
+
+  .animate-slide-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideInUp 0.8s ease-out forwards;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-fill {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .btn-fill::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1e3a8a;
+    transform-origin: bottom left;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-out;
+    z-index: -1;
+  }
+  .btn-fill:hover::after {
+    transform: scaleX(1);
+  }
+
+  .page-enter {
+    animation: pageLoad 0.6s ease-out forwards;
+  }
+}
+
+@keyframes zoomInEffect {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pageLoad {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
